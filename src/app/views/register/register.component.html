@@ -1,0 +1,143 @@
+<div class="container">
+    <form (ngSubmit)="submit($event)" [formGroup]="formGroup">
+        <h1 class="title orange">Create Your Account</h1>
+
+        <div class="form-group">
+            <h2>General Information</h2>
+            <div class="input-group">
+                <div class="input-message">
+                    <input type="text"
+                        [ngClass]="{'invalid-input': formGroup.get('firstName')?.errors && formGroup.get('firstName')?.touched}"
+                        placeholder="First Name" formControlName="firstName" name="firstName">
+                    <p class="invalid-text"
+                        *ngIf="formGroup.get('firstName')?.errors?.required && formGroup.get('firstName')?.touched">This
+                        Field is required</p>
+                </div>
+
+                <div class="input-message">
+                    <input type="text"
+                        [ngClass]="{'invalid-input': formGroup.get('middleName')?.errors && formGroup.get('middleName')?.touched}"
+                        placeholder="Middle Name" formControlName="middleName" name="middleName">
+                    <p class="invalid-text"
+                        *ngIf="formGroup.get('middleName')?.errors?.required && formGroup.get('middleName')?.touched">
+                        This Field is required</p>
+                </div>
+
+                <div class="input-message">
+                    <input type="text"
+                        [ngClass]="{'invalid-input': formGroup.get('lastName')?.errors && formGroup.get('lastName')?.touched}"
+                        placeholder="Last Name" formControlName="lastName" name="lastName">
+                    <p class="invalid-text"
+                        *ngIf="formGroup.get('lastName')?.errors?.required && formGroup.get('lastName')?.touched">This
+                        Field is required</p>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <h2>Other Information</h2>
+                <div class="input-group">
+                    <div class="two-inputs">
+                        <div class="input-message">
+                            <input type="date" placeholder="Date of Birth" formControlName="date" name="date">
+                        </div>
+                        <div class="input-message">
+                            <input type="text" placeholder="Gender" formControlName="gender" name="gender">
+                        </div>
+                    </div>
+                    <div class="input-message">
+                        <input type="text" placeholder="Address(Number and Street)" formControlName="address"
+                            [ngClass]="{'invalid-input': formGroup.get('address')?.errors && formGroup.get('address')?.touched}"
+                            name="address">
+                        <p *ngIf="formGroup.get('address')?.errors?.required && formGroup.get('address')?.touched">This
+                            field is required</p>
+                    </div>
+                    <div class="input-message">
+                        <input type="text"
+                            [ngClass]="{'invalid-input': formGroup.get('city')?.errors && formGroup.get('city')?.touched}"
+                            placeholder="City" formControlName="city" name="city">
+                        <p *ngIf="formGroup.get('city')?.errors?.required && formGroup.get('city')?.touched">
+                            This field is required
+                        </p>
+                    </div>
+                    <div class="input-message">
+                        <input type="text"
+                            [ngClass]="{'invalid-input': formGroup.get('zipCode')?.errors && formGroup.get('zipCode')?.touched}"
+                            placeholder="Zip Code" formControlName="zipCode" name="zipCode">
+                        <p class="invalid-text"
+                            *ngIf="formGroup.get('zipCode')?.errors?.required && formGroup.get('zipCode')?.touched">
+                            This Field is required</p>
+                    </div>
+                    <div class="input-message">
+                        <input type="text"
+                            [ngClass]="{'invalid-input': formGroup.get('state')?.errors && formGroup.get('state')?.touched}"
+                            placeholder="State" formControlName="state" name="state">
+                        <p class="invalid-text"
+                            *ngIf="formGroup.get('state')?.errors && formGroup.get('state')?.touched">
+                            This field is required</p>
+                    </div>
+                    <div class="input-message">
+                        <input type="text" placeholder="SSN" formControlName="ssn" name="ssn">
+                    </div>
+                    <div class="input-message">
+                        <input type="text"
+                            [ngClass]="{'invalid-input': formGroup.get('phoneNumber')?.errors && formGroup.get('phoneNumber')?.touched}"
+                            placeholder="Phone Number" formControlName="phoneNumber" name="phoneNumber">
+                        <p class="invalid-text"
+                            *ngIf="formGroup.get('phoneNumber')?.errors?.required && formGroup.get('phoneNumber')?.touched">
+                            This field is required</p>
+                    </div>
+                    <div class="input-message">
+                        <input type="email"
+                            [ngClass]="{'invalid-input': formGroup.get('email')?.errors && formGroup.get('email')?.touched}"
+                            placeholder="Email" formControlName="email" name="email">
+                        <p class="invalid-text"
+                            *ngIf="formGroup.get('email')?.errors?.required && formGroup.get('email')?.touched">
+                            This field is required</p>
+                        <p class="invalid-text"
+                            *ngIf="formGroup.get('email')?.errors?.email && formGroup.get('email')?.touched">
+                            Must be a valid email</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <h2>Account Setup</h2>
+                <div class="input-group">
+                    <div class="input-message">
+                        <input type="password"
+                            [ngClass]="{'invalid-input': formGroup.get('password')?.errors && formGroup.get('password')?.touched}"
+                            placeholder="Enter Password" formControlName="password" name="password">
+                        <p class="invalid-text"
+                            *ngIf="formGroup.get('password')?.errors?.required && formGroup.get('password')?.touched">
+                            This Field is required</p>
+                        <p class="invalid-text"
+                            *ngIf="formGroup.get('password')?.errors?.minlength && formGroup.get('password')?.touched">
+                            Must be at least 6 characters long</p>
+                    </div>
+                    <div class="input-message">
+                        <input type="password"
+                            [ngClass]="{'invalid-input': formGroup.get('confirmPassword')?.errors && formGroup.get('confirmPassword')?.touched}"
+                            placeholder="Confirm Password" formControlName="confirmPassword" name="confirmPassword">
+                        <p class="invalid-text"
+                            *ngIf="formGroup.get('confirmPassword')?.errors?.required && formGroup.get('confirmPassword')?.touched">
+                            This Field is required</p>
+                        <p class="invalid-text"
+                            *ngIf="formGroup.get('confirmPassword')?.errors?.mustMatch && formGroup.get('confirmPassword')?.touched">
+                            Must match with password</p>
+                    </div>
+                </div>
+            </div>
+
+            <p>By clicking Sign Up, you agree to our <span class="orange">Terms Data Policy</span> and <span
+                    class="orange">Cookie Policy</span></p>
+
+            <div class="button-container">
+                <button type="submit" class="form-button" [ngClass]="{'disabled': formGroup.invalid}"
+                    [disabled]="formGroup.invalid">Sign Up</button>
+            </div>
+
+            <p>Already have an account? <a routerLink="/sign-in" class="orange">Sign In</a></p>
+        </div>
+    </form>
+</div>

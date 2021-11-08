@@ -1,0 +1,11 @@
+.add-candidate {
+    float: right;
+}
+
+.p-dialog .p-dialog-header {
+    display: none !important;
+}
+
+p-dialog .p-dialog-content {
+    padding: 0 !important
+}

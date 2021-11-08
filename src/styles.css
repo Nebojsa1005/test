@@ -1,0 +1,194 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* ------------FORM STYLES START-------- */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 37%;
+    padding: 20px;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.input-group,
+.two-inputs {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.two-inputs {
+    width: 48%;
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+}
+
+.input-message {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+}
+
+input {
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 16px;
+    outline: none;
+}
+
+h1,
+h2 {
+    margin: 1rem 0;
+}
+
+.title {
+    text-align: center;
+}
+
+.orange {
+    color: orange;
+}
+
+form p {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.form-button {
+    margin: 0 auto;
+    width: 200px;
+    color: white;
+    background: orange;
+    padding: 0.5rem;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.form-button:hover {
+    background: orangered
+}
+
+.p-dropdown {
+    width: 300px;
+}
+
+.p-calendar {
+    width: 300px;
+}
+
+.two-inputs .p-calendar {
+    width: 100%;
+}
+
+.two-inputs .p-calendar input {
+    padding: 0.7rem;
+    border: 1px solid gray;
+    outline: none;
+}
+
+p-radiobutton {
+    margin-right: 1rem;
+}
+
+/* ------------FORM STYLES END-------- */
+
+/* ---------------CANDIDATE FORM START---------------- */
+.dialog-buttons {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.dialog-buttons button {
+    width: 48%;
+    margin: 0;
+}
+
+.close-dialog {
+    margin-right: 0.5rem;
+    background: white;
+    border: 1px solid gray;
+    color: gray;
+}
+
+/* ---------------CANDIDATE FORM END---------------- */
+
+/* -------------INVALID STYLES START------------- */
+.input-message p {
+    margin: 0.5rem;
+}
+
+.invalid-input {
+    border: 2px solid red;
+}
+
+.invalid-text {
+    color: red;
+    text-align: left;
+}
+
+.disabled {
+    cursor: not-allowed;
+}
+
+/* -------------INVALID STYLES END------------- */
+
+/* ------------DIALOG STYLES START--------------- */
+
+.p-dialog {
+    width: 100% !important;
+    max-height: 100% !important;
+}
+
+/* ------------DIALOG STYLES END--------------- */

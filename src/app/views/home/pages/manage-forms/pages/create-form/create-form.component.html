@@ -1,0 +1,39 @@
+<div class="buttons dialog-buttons">
+    <button class="close-dialog" (click)="goBack()">Cancel</button>
+    <button class="form-button orange" (click)="submit()">Submit</button>
+</div>
+
+<div class="container">
+    <form [formGroup]="formGroup">
+        <div class="form-group">
+            <h4>1) Select Candidate</h4>
+            <div class="input-message">
+                <p-dropdown [options]="candidates$ | async" formControlName="candidate" optionLabel="fullName">
+                </p-dropdown>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h4>2) Training Program</h4>
+            <div class="input-message">
+                <p-dropdown [options]="programs" formControlName="program" optionLabel="name"
+                    placeholder="Select Program"></p-dropdown>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h4>3) Course Completion Date</h4>
+            <div class="input-message">
+                <p-calendar formControlName="date" dateFormat="dd.mm.yy" [showIcon]="true"></p-calendar>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <h4>4) Are you requesting testing accommodations due to a documented disability</h4>
+            <div class="radio-buttons">
+                <p-radioButton name="disability" value="yes" label="Yes" formControlName="disability"></p-radioButton>
+                <p-radioButton name="disability" value="no" label="No" formControlName="disability"></p-radioButton>
+            </div>
+        </div>
+    </form>
+</div>

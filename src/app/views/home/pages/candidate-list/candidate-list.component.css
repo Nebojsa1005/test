@@ -1,0 +1,67 @@
+
+ul {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+li {
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 23%;
+    margin: 0.5rem;
+    min-height: 400px;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.header {
+    width: 100%;
+    background: #eee;
+    padding: 0.5rem;
+}
+
+
+.snn {
+    color: #333
+}
+
+.candidate-info {
+    padding: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info {
+    width: auto;
+    padding: 0.5rem;
+}
+
+p {
+    margin: 0.2rem;
+}
+
+.info-title {
+    color: #ccc
+}
+
+.info-data {
+    color: darkolivegreen
+}
+
+.date {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+}
+
+.edit {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 18px;
+}

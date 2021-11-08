@@ -1,0 +1,9 @@
+.container {
+    align-items: unset;
+    padding: 50px 0 0 0;
+    min-height: 100%;
+}
+
+form {
+    height: 50%;
+}

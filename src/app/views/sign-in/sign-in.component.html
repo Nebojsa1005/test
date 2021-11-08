@@ -1,0 +1,40 @@
+<div class="container">
+    <form (ngSubmit)="submit($event)" [formGroup]="formGroup">
+        <div class="form-group">
+            <p>Don`t have an account? <a routerLink="/register" class="orange">Sign Up</a></p>
+            <div class="input-group">
+                <div class="input-message w-100">
+                    <input type="email"
+                        [ngClass]="{'invalid-input': formGroup.get('email')?.errors && formGroup.get('email')?.touched}"
+                        placeholder="Enter Email" formControlName="email" name="email">
+                    <p class="invalid-text"
+                        *ngIf="formGroup.get('email')?.errors?.required && formGroup.get('email')?.touched">
+                        This Field is required</p>
+                    <p class="invalid-text"
+                        *ngIf="formGroup.get('email')?.errors?.email && formGroup.get('email')?.touched">
+                        Must be a valid email</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-message w-100">
+                        <input type="password"
+                            [ngClass]="{'invalid-input': formGroup.get('password')?.errors && formGroup.get('password')?.touched}"
+                            placeholder="Confirm Password" formControlName="password" name="password">
+                        <p class="invalid-text"
+                            *ngIf="formGroup.get('password')?.errors?.required && formGroup.get('password')?.touched">
+                            This Field is required</p>
+                        <p class="invalid-text"
+                            *ngIf="formGroup.get('password')?.errors?.minlength && formGroup.get('password')?.touched">
+                            Must be more then 6 characters long</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button type="submit" class="form-button" [ngClass]="{'disabled': formGroup.invalid}"
+                    [disabled]="formGroup.invalid">Sign
+                    In</button>
+            </div>
+        </div>
+    </form>
+</div>
